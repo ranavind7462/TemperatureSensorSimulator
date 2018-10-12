@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Temperate Application</title>
+    <style type="text/css">
+        body{
+            font-family:'Segoe UI',Arial,Arial, Helvetica, sans-serif;
+            font-size:16px;
+        }
+        #tempTable table{
+            border-collapse:collapse;
+        }
+        #tempTable table th,#tempTable table td {
+            padding:2px 6px;
+        }
+        #tempTable table td{
+            text-align:right;
+        }
+        #tempTable .loading td{
+            text-align:left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Temperature Reading Application</h1>
+    <h2>Live Updates</h2>
+    <label id="lbl1"></label>
+    <div id="tempTable">
+        <table border="1">
+            <thead>
+                <tr><th>Date</th><th>Temperature</th></tr>
+            </thead>
+            <tbody>
+                <tr class="loading"><td colspan="2">loading...</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="Scripts/jquery-1.6.4.min.js"></script>
+    <script src="Scripts/jquery.signalR-2.3.0.min.js"></script>
+    <script src="http://localhost:8077/signalr/hubs"></script>
+
+    <script src="Scripts/TemperatureTicker.js"></script>
+</body>
+</html>
